@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - NovaTech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Nova<span>Tech</span></div>
+    <nav>
+      <a href="index.html">Site</a>
+      <a href="#" onclick="logout()">Déconnexion</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Dashboard Administrateur</h2>
+    <p class="section-subtitle">Gestion des services et des clients</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>📩 Messages reçus</h3>
+        <p>12 nouveaux messages aujourd’hui</p>
+      </div>
+
+      <div class="card">
+        <h3>👥 Clients actifs</h3>
+        <p>48 clients abonnés aux services cloud</p>
+      </div>
+
+      <div class="card">
+        <h3>🌍 Sites hébergés</h3>
+        <p>21 projets déployés sur Azure App Service</p>
+      </div>
+
+      <div class="card">
+        <h3>⚙️ Performance</h3>
+        <p>Disponibilité 99.9% avec monitoring Azure</p>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h2 class="section-title">Liste des Services</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Web Hosting</h3>
+        <p>Hébergement sécurisé et rapide.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cloud Azure</h3>
+        <p>Déploiement et scaling automatique.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cyber Sécurité</h3>
+        <p>Protection des données et pare-feu.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 NovaTech - Dashboard Admin</p>
+  </footer>
+
+  <script>
+    // Protect dashboard
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

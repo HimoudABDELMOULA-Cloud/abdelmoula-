@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaTech - Solutions Digitales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Nova<span>Tech</span></div>
+    <nav>
+      <a href="#home">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Contact</a>
+      <a href="login.html">Admin</a>
+    </nav>
+    <button class="btn" onclick="scrollToContact()">Devis</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Solutions Digitales pour votre Entreprise</h1>
+      <p>
+        NovaTech vous accompagne dans la création de sites web, applications cloud
+        et services IT modernes avec sécurité et performance.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn" onclick="scrollToServices()">Nos services</button>
+        <button class="btn-outline" onclick="scrollToContact()">Contact</button>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>🚀 Hébergement Cloud</h3>
+      <p>Déployez votre application facilement avec Azure App Service.</p>
+      <div class="stats">
+        <div>
+          <h2>99.9%</h2>
+          <span>Disponibilité</span>
+        </div>
+        <div>
+          <h2>24/7</h2>
+          <span>Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <h2 class="section-title">Nos Services</h2>
+    <p class="section-subtitle">Des solutions adaptées à votre besoin</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>🌐 Création de Sites Web</h3>
+        <p>Sites modernes, rapides et responsives adaptés à tous les écrans.</p>
+      </div>
+
+      <div class="card">
+        <h3>☁️ Cloud & Azure</h3>
+        <p>Déploiement d’applications sur Azure App Service avec sécurité.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔒 Sécurité Informatique</h3>
+        <p>Protection des données, gestion des accès, monitoring.</p>
+      </div>
+
+      <div class="card">
+        <h3>📊 Data & Analyse</h3>
+        <p>Tableaux de bord, rapports et visualisation des données.</p>
+      </div>
+
+      <div class="card">
+        <h3>📱 Applications Mobiles</h3>
+        <p>Applications Android/iOS modernes et performantes.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚙️ Maintenance</h3>
+        <p>Mise à jour, optimisation et support technique 24/7.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="about-text">
+      <h2>Pourquoi NovaTech ?</h2>
+      <p>
+        Nous sommes une entreprise spécialisée dans le développement web et le cloud.
+        Notre objectif est d’aider les entreprises à réussir leur transformation digitale.
+      </p>
+
+      <ul>
+        <li>✅ Déploiement rapide sur le cloud</li>
+        <li>✅ Sécurité et fiabilité</li>
+        <li>✅ Optimisation des performances</li>
+        <li>✅ Solutions personnalisées</li>
+      </ul>
+    </div>
+
+    <div class="about-box">
+      <h3>🌟 Notre Mission</h3>
+      <p>
+        Fournir des solutions digitales innovantes pour améliorer la productivité et
+        la croissance des entreprises.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <h2 class="section-title">Contactez-nous</h2>
+    <p class="section-subtitle">Envoyez-nous un message et on vous répond rapidement</p>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Nom complet" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <textarea id="message" placeholder="Votre message..." required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+
+    <p class="success" id="successMsg"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 NovaTech - Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

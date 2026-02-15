@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion - NovaTech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Nova<span>Tech</span></div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Connexion Admin</h2>
+    <p class="section-subtitle">Accès réservé aux administrateurs</p>
+
+    <form class="contact-form" onsubmit="login(event)">
+      <input type="text" id="username" placeholder="Nom d'utilisateur" required />
+      <input type="password" id="password" placeholder="Mot de passe" required />
+      <button type="submit" class="btn">Se connecter</button>
+    </form>
+
+    <p class="success" id="loginMsg"></p>
+  </section>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+
+      let user = document.getElementById("username").value;
+      let pass = document.getElementById("password").value;
+
+      // Demo credentials
+      if (user === "admin" && pass === "1234") {
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("loginMsg").style.color = "red";
+        document.getElementById("loginMsg").innerText =
+          "❌ Identifiants incorrects (Essayez admin / 1234)";
+      }
+    }
+  </script>
+
+</body>
+</html>
